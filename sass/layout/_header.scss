@@ -1,0 +1,36 @@
+header {
+    height: 90vh;
+    background-image: linear-gradient(to right bottom,
+     rgba($light-slate, 0.6),
+     rgba($dark-slate, 0.7)), 
+      url(../img/hero.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    letter-spacing: .5rem;
+    overflow: hidden;
+    position: relative;
+    
+    &text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: block;
+        padding-top: 4rem;
+        
+        &heading-primary {
+            font-size: 4rem;
+            display: inline-block;
+            animation-name: moveUp;
+            animation-duration: 1s
+        }
+        &heading-secondary {
+            display: inline-block;
+            font-size: 3rem;
+            animation-name: moveUp;
+            animation-duration: 1s
+        }
+    }
+}

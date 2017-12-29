@@ -1,0 +1,33 @@
+.btn-container {
+    text-align: center;
+    margin-top: 5%;
+    animation-name: moveLeft;
+    animation-duration: 1s;
+    
+    &btn:link,&btn:visited {
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 2rem;
+        border-radius: 10rem;
+        margin-bottom: 2rem;
+        margin-left: .8rem;
+        margin-right: .8rem;
+        display: inline-block;
+        transition: all .2s
+
+    }
+    &btn:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+    }
+    &btn:active {
+        transform: translateY(-.1rem); 
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    &btn-gray {
+        background-color: $light-steel-blue;
+        color: $rosy-brown;
+        opacity: 0.8;
+    }
+}
