@@ -1,0 +1,52 @@
+.heading-about {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+body {
+    font-family: "Cabin", sans-serif;
+    font-weight: 200;
+    padding: 4rem;
+    line-height: 1.9;
+    color: $white;
+}
+header {
+    letter-spacing: .5rem;
+    
+    .text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        display: block;
+        padding-top: 4rem;
+        
+        .heading-primary {
+            font-size: 4rem;
+            display: inline-block;
+            animation-name: moveUp;
+            animation-duration: 1s
+        }
+        .heading-secondary {
+            display: inline-block;
+            font-size: 3rem;
+            animation-name: moveUp;
+            animation-duration: 1s
+        }
+    }
+}
+.section-about {
+    .heading-tertiary {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: $dark-slate;
+        letter-spacing: .5rem;
+    }
+    .about-me {
+            color: $dark-slate;
+            font-size: 1.8rem;
+        }
+}
+
+

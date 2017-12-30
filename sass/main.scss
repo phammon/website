@@ -1,38 +1,15 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
-
 @import "base/animations";
 @import "base/base";
-@import "base/typography";
 @import "base/utilities";
+@import "base/typography";
 @import "components/button";
+@import "components/skill-cards";
 @import "layout/header";
-
+@import "layout/main";
 @import "pages/home";
-
-/*allows us to start clean */
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-} 
-/* pixels that you want divided by 16px(default browser size) this gives the user the ability to zoom and you the ability to use rems */
-/* 13 pixels looked good so 13/16 = .8125 */
-html {
-    font-size: 81.25%; 
-}
-body {
-    font-family: "Cabin", sans-serif;
-    font-weight: 200;
-    padding: 4rem;
-    line-height: 1.9;
-    color: $white;
-    box-sizing: border-box;
-    background-color: $light-steel-blue;
-}
 
 
 

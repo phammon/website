@@ -1,0 +1,19 @@
+//basic definitions for our project
+//these first three declarations kind of reset the browser margins and padding,
+//because some browsers add their own stuff. We want to start from scratch
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+} 
+/* pixels that you want divided by 16px(default browser size) this gives the user the ability to zoom and you the ability to use rems */
+/* 13 pixels looked good so 13/16 = .8125 */
+html {
+    //this defines what 1 rem is
+    font-size: 81.25%; 
+}
+body {
+    box-sizing: border-box;
+}
