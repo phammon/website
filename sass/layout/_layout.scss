@@ -1,0 +1,24 @@
+.row {
+    max-width: 114rem; //1140px is the standard for this.
+    margin: 0 auto;
+    margin-bottom: 80px;
+
+    //gutter is the space between the columns we are saying we don't want to have the
+    //gutter on the last column
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
+    }
+    
+    @include clearfix;
+    
+    .col-1-of-3 {
+        width: calc((100% - (#{$gutter-horizontal} * 2) ) /3); //100% of width minus two gutters divided by how many columns there are will
+        //will give you correct calculation
+        float: left;
+            
+        &:not(:last-child) { //we don't want the gutter on the right most child so everything gets rendered properly
+                margin-right: $gutter-horizontal;;
+            }
+        }
+
+}

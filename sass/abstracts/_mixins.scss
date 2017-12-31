@@ -1,0 +1,14 @@
+/* what is a mixin? reusable chunk of code
+ex: you have properties that you want to use for your button, instead of remembering
+what those properties are you can define them in a mixin and then use it as a selector
+instead  */
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both //clears both float left and float right 
+    }
+}
+/*It is important to remember that a clearfix is a type of hack 
+used to fix problems associated with floating child elements within a parent element. */

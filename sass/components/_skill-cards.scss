@@ -1,3 +1,37 @@
-.skill-cards {
+.skill-cards-container {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 5rem;
 
+    .skill-cards {
+        background-color: rgba($dark-slate, .15);
+        padding: 2.5rem;
+        height: 25rem;
+        border-radius: .3rem;
+        box-shadow: 0 1.5rem 4rem rgba($black, .1);
+        border: .5rem;
+        border-color: $black;
+        overflow: auto;
+        transition: transform .3s;
+
+           .icon-basic-picture-multiple {
+            font-size: 5rem;
+            margin-bottom: .5rem;
+            color: $rosy-brown;
+           }
+           .icon-basic-server2 {
+            font-size: 5rem;
+            margin-bottom: .5rem;
+            color: $rosy-brown;
+           }
+           .icon-basic-gear {
+            font-size: 5rem;
+            margin-bottom: .5rem;
+            color: $rosy-brown;
+           }
+
+           &:hover {
+               transform: translateY(-1.5rem) scale(1.03);
+           }
+     }
 }
