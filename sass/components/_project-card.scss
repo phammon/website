@@ -1,0 +1,50 @@
+.project-card-container {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 5rem;
+
+    .project-card {
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        height: 25rem;
+        position: relative;
+        
+
+            .card-side {
+                padding: 2.5rem;
+                height: 25rem;
+                border-radius: .3rem;
+                box-shadow: 0 1.5rem 4rem rgba($black, .1);
+                border: .5rem;
+                border-color: $black;
+                overflow: auto;
+                transition: all .8s !important;
+                position: absolute;
+                width: 100%;
+                //hides the back of the element
+                backface-visibility: hidden;
+                &-front {
+                    background-color: rgba($dark-slate, .15);
+                }
+
+                &-back {
+                    background-color: rgba($dark-slate, .15);
+                    transform: rotateY(180deg);
+                }
+                img {
+                    width: 22.5rem;
+                    height: 20rem;
+                    padding-right: .8rem;
+                }
+            }
+
+           &:hover .card-side-front {
+            transform: rotateY(180deg);
+            
+           }
+           &:hover .card-side-back {
+            transform: rotateY(0);
+          }
+
+     }
+}

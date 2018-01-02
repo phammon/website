@@ -87,6 +87,14 @@ header {
   font-weight: 700;
   color: #464d53;
   letter-spacing: .5rem; }
+  .section-projects .heading-tertiary {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #464d53;
+    letter-spacing: .5rem; }
+  .section-projects p {
+    font-size: 2rem;
+    letter-spacing: 0; }
 
 .section-blog {
   font-size: 3.5rem;
@@ -127,6 +135,31 @@ header {
     color: #985b50;
     opacity: 0.8; }
 
+.btn:link, .btn:visited {
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 2rem;
+  border-radius: 10rem;
+  margin-bottom: 2rem;
+  margin-left: .8rem;
+  margin-right: .8rem;
+  display: inline-block;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn-gray {
+  background-color: #e3e4e5;
+  color: #985b50;
+  opacity: 0.8; }
+
 .skill-cards-container {
   width: 75%;
   margin: 0 auto;
@@ -165,6 +198,41 @@ header {
   overflow: hidden;
   position: relative; }
 
+.project-card-container {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 5rem; }
+  .project-card-container .project-card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    height: 25rem;
+    position: relative; }
+    .project-card-container .project-card .card-side {
+      padding: 2.5rem;
+      height: 25rem;
+      border-radius: .3rem;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
+      border: .5rem;
+      border-color: #000;
+      overflow: auto;
+      transition: all .8s !important;
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden; }
+      .project-card-container .project-card .card-side-front {
+        background-color: rgba(70, 77, 83, 0.15); }
+      .project-card-container .project-card .card-side-back {
+        background-color: rgba(70, 77, 83, 0.15);
+        transform: rotateY(180deg); }
+      .project-card-container .project-card .card-side img {
+        width: 22.5rem;
+        height: 20rem;
+        padding-right: .8rem; }
+    .project-card-container .project-card:hover .card-side-front {
+      transform: rotateY(180deg); }
+    .project-card-container .project-card:hover .card-side-back {
+      transform: rotateY(0); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -186,21 +254,18 @@ header {
   padding-top: 5rem;
   background-color: #f7f7f7;
   text-align: center;
-  height: 90vh; }
+  height: 95vh; }
 
 .section-projects {
   margin-top: 3rem;
   padding-top: 5rem;
   background-color: #f7f7f7;
   text-align: center;
-  height: 90vh; }
-  .section-projects img {
-    height: 20rem;
-    padding-right: 1rem; }
+  height: 95vh; }
 
 .section-contact {
   margin-top: 3rem;
-  padding-top: 5rem;
+  padding-top: 20rem;
   background-color: #f7f7f7;
   text-align: center;
-  height: 90vh; }
+  height: 95vh; }
