@@ -4,37 +4,13 @@ what those properties are you can define them in a mixin and then use it as a se
 instead  */
 /*It is important to remember that a clearfix is a type of hack 
 used to fix problems associated with floating child elements within a parent element. */
-@keyframes moveLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100px); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-/* pixels that you want divided by 16px(default browser size) this gives the user the ability to zoom and you the ability to use rems */
-/* 13 pixels looked good so 13/16 = .8125 */
-html {
-  font-size: 81.25%; }
-
-body {
-  box-sizing: border-box; }
-
+/*
+phone - 0 - 600px
+Tablet Portrait - 600px - 900px
+Tablet Landscape - 900px - 1200px
+Normal:             1200 - 1800px
+Big Desktop:        1800px ++ 
+*/
 .heading-about {
   font-size: 3.5rem;
   font-weight: 600;
@@ -43,7 +19,6 @@ body {
 body {
   font-family: "Cabin", sans-serif;
   font-weight: 200;
-  padding: 4rem;
   line-height: 1.9;
   color: #fff; }
 
@@ -107,6 +82,55 @@ header {
   font-weight: 700;
   color: #464d53;
   letter-spacing: .5rem; }
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* pixels that you want divided by 16px(default browser size) this gives the user the ability to zoom and you the ability to use rems */
+html {
+  font-size: 68.75%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 62.5%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 24em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 4rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 .btn-container {
   text-align: center;
@@ -208,7 +232,7 @@ header {
     height: 25rem;
     position: relative; }
     .project-card-container .project-card .card-side {
-      padding: 2.5rem;
+      padding: 1.5rem;
       height: 25rem;
       border-radius: .3rem;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
@@ -217,7 +241,7 @@ header {
       overflow: auto;
       transition: all .8s !important;
       position: absolute;
-      width: 100%;
+      width: 25rem;
       backface-visibility: hidden; }
       .project-card-container .project-card .card-side-front {
         background-color: rgba(70, 77, 83, 0.15); }
@@ -239,6 +263,12 @@ header {
   margin-bottom: 80px; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
   .row::after {
     content: "";
     display: table;
@@ -248,6 +278,13 @@ header {
     float: left; }
     .row .col-1-of-3:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row .col-1-of-3:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media (max-width: 56.25em) {
+      .row .col-1-of-3 {
+        width: 100% !important; } }
 
 .section-about {
   margin-top: 3rem;
@@ -255,6 +292,9 @@ header {
   background-color: #f7f7f7;
   text-align: center;
   height: 95vh; }
+  @media (max-width: 56.25em) {
+    .section-about {
+      height: 155vh; } }
 
 .section-projects {
   margin-top: 3rem;
@@ -262,6 +302,9 @@ header {
   background-color: #f7f7f7;
   text-align: center;
   height: 95vh; }
+  @media (max-width: 56.25em) {
+    .section-projects {
+      height: 170vh; } }
 
 .section-contact {
   margin-top: 3rem;

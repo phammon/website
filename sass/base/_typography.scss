@@ -6,9 +6,9 @@
 body {
     font-family: "Cabin", sans-serif;
     font-weight: 200;
-    padding: 4rem;
     line-height: 1.9;
     color: $white;
+   
 }
 header {
     letter-spacing: .5rem;
@@ -26,7 +26,12 @@ header {
             font-size: 4rem;
             display: inline-block;
             animation-name: moveUp;
-            animation-duration: 1s
+            animation-duration: 1s;
+            
+            // @include respond(small-phone) { //< 375px
+            //     font-size: 3rem;
+            // }
+                
         }
         .heading-secondary {
             display: inline-block;

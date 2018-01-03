@@ -9,11 +9,36 @@
     box-sizing: inherit;
 } 
 /* pixels that you want divided by 16px(default browser size) this gives the user the ability to zoom and you the ability to use rems */
-/* 13 pixels looked good so 13/16 = .8125 */
+
 html {
     //this defines what 1 rem is
-    font-size: 81.25%; 
+    font-size: 68.75%; //1 rem = 11px. 10/16 = 62.5
+
+    @include respond(big-desktop) { //12px = 1rem
+        font-size: 75%;
+    }
+    
+    @include respond(tab-land) { //10px = 1rem
+        font-size: 62.5%;
+    }
+    
+    @include respond(tab-port) { //9px
+        font-size: 56.25%;
+    }
+    @include respond(phone) { //8px
+        font-size: 50%;
+    }
+    @include respond(small-phone) {
+        font-size: 40%;
+    }
+    
 }
 body {
     box-sizing: border-box;
+    padding: 4rem;
+
+    @include respond(tab-port) { //9px
+        padding: 0;
+    }
+
 }

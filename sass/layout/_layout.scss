@@ -7,8 +7,14 @@
     //gutter on the last column
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
-    
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
     @include clearfix;
     
     .col-1-of-3 {
@@ -18,7 +24,16 @@
             
         &:not(:last-child) { //we don't want the gutter on the right most child so everything gets rendered properly
                 margin-right: $gutter-horizontal;;
+                
+                @include respond(tab-port) {
+                    margin-right: 0;
+                    margin-bottom: $gutter-vertical-small;
+                }
             }
+        
+        @include respond(tab-port) {
+            width: 100% !important;
         }
+    }
 
 }

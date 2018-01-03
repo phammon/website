@@ -4,6 +4,10 @@
     background-color: $light-gray;
     text-align: center;
     height: 95vh;
+
+    @include respond(tab-port) {
+        height: 155vh;
+    }
 }
 .section-projects {
     margin-top: 3rem;
@@ -11,6 +15,10 @@
     background-color: $light-gray;
     text-align: center;
     height: 95vh;
+
+    @include respond(tab-port) {
+        height: 170vh;
+    }
 
 }
 .section-contact {
