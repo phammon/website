@@ -1,5 +1,5 @@
 .skill-cards-container {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 5rem;
 
@@ -13,6 +13,10 @@
         border-color: $black;
         overflow: auto;
         transition: transform .3s;
+
+            ul {
+                list-style-type: none;
+            }
 
            .icon-basic-picture-multiple {
             font-size: 5rem;
