@@ -5,9 +5,10 @@ instead  */
 /*It is important to remember that a clearfix is a type of hack 
 used to fix problems associated with floating child elements within a parent element. */
 /*
-phone - 0 - 600px
-Tablet Portrait - 600px - 900px
-Tablet Landscape - 900px - 1200px
+    Break Point Argurment Choices
+phone -             0 - 600px
+Tablet Portrait -   600px - 900px
+Tablet Landscape -  900px - 1200px
 Normal:             1200 - 1800px
 Big Desktop:        1800px ++ 
 */
@@ -32,6 +33,12 @@ header {
     text-align: center;
     display: block;
     padding-top: 4rem; }
+    @media (max-width: 37.5em) {
+      header .text-box {
+        top: 35%; } }
+    @media (max-width: 56.25em) {
+      header .text-box {
+        top: 40%; } }
     header .text-box .heading-primary {
       font-size: 4rem;
       display: inline-block;
@@ -42,6 +49,9 @@ header {
       font-size: 3rem;
       animation-name: moveUp;
       animation-duration: 1s; }
+      @media (max-width: 37.5em) {
+        header .text-box .heading-secondary {
+          font-size: 2.5rem; } }
 
 .section-about .heading-tertiary {
   font-size: 3.5rem;
@@ -52,10 +62,21 @@ header {
 .section-about .about-me {
   color: #464d53;
   font-size: 1.8rem; }
+  @media (max-width: 37.5em) {
+    .section-about .about-me {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+  @media (max-width: 56.25em) {
+    .section-about .about-me {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
 
 .section-about .skill-cards {
   color: #464d53;
   font-size: 1.5rem; }
+  @media (max-width: 37.5em) {
+    .section-about .skill-cards {
+      font-size: 1.9rem; } }
 
 .section-projects {
   font-size: 3.5rem;
@@ -67,9 +88,6 @@ header {
     font-weight: 700;
     color: #464d53;
     letter-spacing: .5rem; }
-  .section-projects p {
-    font-size: 3rem;
-    letter-spacing: 0; }
 
 .section-blog {
   font-size: 3.5rem;
@@ -224,10 +242,20 @@ body {
   overflow: hidden;
   position: relative;
   margin-bottom: 3rem; }
+  @media (max-width: 37.5em) {
+    .header {
+      height: 100vh; } }
+  @media (max-width: 56.25em) {
+    .header {
+      height: 105vh; } }
+  @media (max-width: 75em) {
+    .header {
+      height: 110vh; } }
 
 .project-card {
   perspective: 150rem;
   -moz-perspective: 150rem;
+  -webkit-perspective: 150rem;
   position: relative;
   height: 33rem; }
   .project-card__side {
@@ -237,11 +265,11 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.1);
     border: .5rem;
     border-color: #000;
-    border-radius: .3rem; }
+    border-radius: .3rem;
+    -webkit-backface-visibility: hidden; }
     .project-card__side--front--image {
       max-width: 100%; }
     .project-card__side--back {
@@ -250,14 +278,16 @@ body {
       background-color: #464d53;
       transform: rotateY(180deg); }
       .project-card__side--back--text {
-        display: table; }
-        .project-card__side--back--text p {
-          display: table-cell;
-          vertical-align: middle; }
+        display: table;
+        visibility: hidden;
+        transition: -.4s; }
   .project-card:hover .project-card__side--front {
-    transform: rotateY(180deg); }
+    -webkit-transform: rotateY(180deg); }
   .project-card:hover .project-card__side--back {
-    transform: rotateY(0); }
+    -webkit-transform: rotateY(0); }
+  .project-card:hover .project-card__side--back--text {
+    visibility: visible;
+    transition-delay: .4s; }
 
 .row {
   max-width: 114rem;
@@ -297,19 +327,37 @@ body {
   background-color: #f7f7f7;
   text-align: center;
   height: 95vh; }
+  @media (max-width: 75em) {
+    .section-about {
+      height: 130vh; } }
   @media (max-width: 56.25em) {
     .section-about {
-      height: 155vh; } }
+      height: 260vh; } }
+  @media (max-width: 37.5em) {
+    .section-about {
+      height: 250vh; } }
+  @media (max-width: 24em) {
+    .section-about {
+      height: 200vh; } }
 
 .section-projects {
   margin-top: 3rem;
   padding-top: 5rem;
   background-color: #f7f7f7;
   text-align: center;
-  height: 95vh; }
+  height: 100vh; }
+  @media (max-width: 75em) {
+    .section-projects {
+      height: 160vh; } }
   @media (max-width: 56.25em) {
     .section-projects {
-      height: 170vh; } }
+      height: 265vh; } }
+  @media (max-width: 37.5em) {
+    .section-projects {
+      height: 250vh; } }
+  @media (max-width: 24em) {
+    .section-projects {
+      height: 200vh; } }
 
 .section-contact {
   position: relative;
@@ -318,3 +366,13 @@ body {
   background-color: #f7f7f7;
   text-align: center;
   height: 95vh; }
+  @media (max-width: 75em) {
+    .section-contact {
+      padding-top: 15rem;
+      height: 90vh; } }
+  @media (max-width: 56.25em) {
+    .section-contact {
+      height: 100vh; } }
+  @media (max-width: 24em) {
+    .section-contact {
+      height: 75vh; } }

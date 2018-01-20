@@ -7,21 +7,38 @@
     text-align: center;
     height: 95vh;
 
-    @include respond(tab-port) {
-        height: 155vh;
+    @include respond(tab-land) {
+        height: 130vh;
     }
+    @include respond(tab-port) {
+        height: 260vh;
+    }
+    @include respond(phone) {
+        height: 250vh;
+    }
+    @include respond(small-phone) {
+        height: 200vh;
+    }
+
 }
 .section-projects {
     margin-top: 3rem;
     padding-top: 5rem;
     background-color: $light-gray;
     text-align: center;
-    height: 95vh;
-
-    @include respond(tab-port) {
-        height: 170vh;
+    height: 100vh;
+    @include respond(tab-land) {
+        height: 160vh;
     }
-
+    @include respond(tab-port) {
+        height: 265vh;
+    }
+    @include respond(phone) {
+        height: 250vh;
+    }
+    @include respond(small-phone) {
+        height: 200vh;
+    }
 }
 .section-contact {
     position: relative;
@@ -30,4 +47,14 @@
     background-color: $light-gray;
     text-align: center;
     height: 95vh;
+    @include respond(tab-land) {
+        padding-top: 15rem;
+        height: 90vh;
+    }
+    @include respond(tab-port) {
+        height: 100vh;
+    }
+    @include respond(small-phone) {
+        height: 75vh;
+    }
 }
