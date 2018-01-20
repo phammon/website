@@ -354,10 +354,12 @@ body {
       height: 265vh; } }
   @media (max-width: 37.5em) {
     .section-projects {
-      height: 250vh; } }
+      height: 260vh;
+      max-width: 100%; } }
   @media (max-width: 24em) {
     .section-projects {
-      height: 200vh; } }
+      height: 220vh;
+      max-width: 100%; } }
 
 .section-contact {
   position: relative;

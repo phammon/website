@@ -35,9 +35,11 @@
     }
     @include respond(phone) {
         height: 260vh;
+        max-width: 100%;
     }
     @include respond(small-phone) {
         height: 220vh;
+        max-width: 100%;
     }
 }
 .section-contact {

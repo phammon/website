@@ -5,6 +5,7 @@
     position: relative;
     height: 33rem;
 
+
     &__side {
         height: 33rem;
         transition: all .6s ease;
@@ -22,9 +23,7 @@
         &--front {
 
             &--image {
-                width: auto;
                 max-width: 100%;
-                height: auto;
             }
         }
         &--back {
