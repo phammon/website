@@ -12,5 +12,3 @@
     "node-sass": "^4.7.2"
   }
 }
-//npm run compile:sass
-//open index.html in browser

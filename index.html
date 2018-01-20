@@ -5,6 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto|Work+Sans" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+                $(document).ready(function(){
+                  // Add smooth scrolling to all links
+                  $("a").on('click', function(event) {
+                
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                      // Prevent default anchor click behavior
+                      event.preventDefault();
+                
+                      // Store hash
+                      var hash = this.hash;
+                
+                      // Using jQuery's animate() method to add smooth page scroll
+                      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                      $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                      }, 800, function(){
+                   
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                      });
+                    } // End if
+                  });
+                });
+        </script>
         <link rel="stylesheet" href="./css/icon-styles.css">
         <link rel="stylesheet" href="./css/style.css">
         <title>Portfolio</title>
@@ -83,7 +110,7 @@
                             <div class="col-1-of-3 project-card">
                                 <div class="project-card__side project-card__side--front">
                                     <div class="project-card__side project-card__side--front project-card__side--front__image">
-                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/moviedb-pic.png'>
+                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/moviedb-app.png'>
                                     </div>
                                 </div>
                                 <div class="project-card__side project-card__side--back">
@@ -95,7 +122,7 @@
                             <div class="col-1-of-3 project-card">
                                 <div class="project-card__side project-card__side--front">
                                     <div class="project-card__side project-card__side--front project-card__side--front__image">
-                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/leaderboard-app.png'>
+                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/wikipedia.png'>
                                     </div>
                                 </div>
                                 <div class="project-card__side project-card__side--back">
@@ -103,9 +130,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                        <div class="btn-container btn-container__position">
                                 <a class="btn btn-gray" href="https://github.com/phammon?tab=repositories">github</a>
+                        </div>
                     </div>
             </section>
             <section id="contact" class="section-contact">
