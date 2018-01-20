@@ -34,10 +34,10 @@
         height: 265vh;
     }
     @include respond(phone) {
-        height: 250vh;
+        height: 260vh;
     }
     @include respond(small-phone) {
-        height: 200vh;
+        height: 220vh;
     }
 }
 .section-contact {
