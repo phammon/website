@@ -4,7 +4,7 @@
   "description": "portfolio website",
   "main": "index.js",
   "scripts": {
-   "compile:sass":"node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Patrick",
   "license": "ISC",
@@ -12,3 +12,5 @@
     "node-sass": "^4.7.2"
   }
 }
+//npm run compile:sass
+//open index.html in browser
