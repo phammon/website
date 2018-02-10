@@ -1,139 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="./img/favi.ico" rel="icon" type="image/ico" />
-        <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto|Work+Sans" rel="stylesheet"> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script>
-                $(document).ready(function(){
-                  // Add smooth scrolling to all links
-                  $("a").on('click', function(event) {
-                    if (this.hash !== "") {
-                      event.preventDefault();
-                      var hash = this.hash;
-                
-                      $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                      }, 800, function(){
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                      });
-                    } 
-                  });
-                });
-        </script>
-        <link rel="stylesheet" href="./css/icon-styles.css">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <header class="header" >
-            <div class="text-box">
-                <h1 class=>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./img/favi.ico" rel="icon" type="image/ico" />
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Roboto|Work+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function() {
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="./css/icon-styles.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="text-box">
+      <h1 class=>
                     <span class="heading-primary">Hi, I'm Patrick</span>
                     <span class="heading-secondary">I'm a Developer and Designer by trade. Lets connect!</span>
                 </h1>
 
+    </div>
+    <div class="btn-container">
+      <a href="#contact" class="btn btn-gray">Contact</a>
+      <a href="#about" class="btn btn-gray">About</a>
+      <a href="#projects" class="btn btn-gray">Projects</a>
+      <a target="_blank" href="https://github.com/phammon?tab=repositories">github</a>
+    </div>
+  </header>
+  <main>
+    <section id="about" class="section-about">
+      <h2 class="heading-tertiary">about me</h2>
+      <p class="about-me">
+        I am a self taught developer. I eat sleep and breathe code and I have a passion for building all the things!
+      </p>
+      <div class="skill-cards-container">
+        <div class="row">
+          <div class="col-1-of-3 skill-cards">
+            <i class="icon-basic-picture-multiple"></i>
+            <h3 class="heading-quarternary">Front End</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS and SASS</li>
+              <li>JavaScript & React.JS</li>
+            </ul>
+          </div>
+          <div class="col-1-of-3 skill-cards">
+            <i class="icon-basic-server2"></i>
+            <h3 class="heading-quarternary">Back End</h3>
+            <ul>
+              <li>MongoDB</li>
+              <li>Node.JS</li>
+              <li>Express</li>
+            </ul>
+          </div>
+          <div class="col-1-of-3 skill-cards">
+            <i class="icon-basic-gear"></i>
+            <h3 class="heading-quarternary">Cloud and Infrastructure</h3>
+            <ul>
+              <li>Amazon Web Services</li>
+              <li>Ansible/Terraform</li>
+              <li>Linux Systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section-projects">
+
+      <h2 class="heading-tertiary">projects</h2>
+      <div class="project-card-container">
+        <div class="row">
+          <div class="col-1-of-3 project-card">
+            <div class="project-card__side project-card__side--front">
+              <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/vaulto.png'>
             </div>
-            <div class="btn-container">
-                <a href="#contact" class="btn btn-gray">Contact</a>
-                <a href="#about" class="btn btn-gray">About</a>
-                <a href="#projects" class="btn btn-gray">Projects</a>
+            <div class="project-card__side project-card__side--back">
+              <div class="project-card__side project-card__side--back--text">
+                <div>Electron </div>
+                <div>Node</div>
+                <div>React</div>
+                <div>MongoDB</div>
+              </div>
             </div>
-        </header>
-        <main>  
-            <section id="about" class="section-about">
-                <h2 class="heading-tertiary">about me</h2>
-                <p class="about-me">
-                    I am a self taught developer. I eat sleep and breathe code and I have a passion for building all the things! 
-                </p>
-                    <div class="skill-cards-container">
-                        <div class="row">
-                            <div class="col-1-of-3 skill-cards">
-                                <i class="icon-basic-picture-multiple"></i>
-                                <h3 class="heading-quarternary">Front End</h3>
-                                <ul>
-                                    <li>HTML</li>
-                                    <li>CSS and SASS</li>
-                                    <li>JavaScript & React.JS</li>
-                                </ul>
-                            </div>
-                            <div class="col-1-of-3 skill-cards">
-                                <i class="icon-basic-server2"></i>
-                                <h3 class="heading-quarternary">Back End</h3>
-                                <ul>
-                                    <li>MongoDB</li>
-                                    <li>Node.JS</li>
-                                    <li>Express</li>
-                                </ul>
-                            </div>
-                            <div class="col-1-of-3 skill-cards">
-                                <i class="icon-basic-gear"></i>
-                                <h3 class="heading-quarternary">Cloud and Infrastructure</h3>
-                                <ul>
-                                    <li>Amazon Web Services</li>
-                                    <li>Ansible/Terraform</li>
-                                    <li>Linux Systems</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <section id="projects" class="section-projects">
-                
-                <h2 class="heading-tertiary">projects</h2>
-                <div class="project-card-container">
-                        <div class="row">
-                            <div class="col-1-of-3 project-card">
-                                <div class="project-card__side project-card__side--front">
-                                    <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/vaulto.png'>
-                                </div>
-                                <div class="project-card__side project-card__side--back">
-                                      <div class="project-card__side project-card__side--back--text">
-                                           <div>Electron </div>
-                                           <div>Node</div>
-                                           <div>React</div>
-                                           <div>MongoDB</div>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="col-1-of-3 project-card">
-                                <div class="project-card__side project-card__side--front">
-                                    <div class="project-card__side project-card__side--front project-card__side--front__image">
-                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/moviedb-app.png'>
-                                    </div>
-                                </div>
-                                <div class="project-card__side project-card__side--back">
-                                    <div class="project-card__side project-card__side--back--text">
-                                        <div>React</div>
-                                    </div>
-                                </div>
-                            </div>                        
-                            <div class="col-1-of-3 project-card">
-                                <div class="project-card__side project-card__side--front">
-                                    <div class="project-card__side project-card__side--front project-card__side--front__image">
-                                        <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/wikipedia.png'>
-                                    </div>
-                                </div>
-                                <div class="project-card__side project-card__side--back">
-                                    <div class="project-card__side project-card__side--back--text">
-                                        <div>React</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="btn-container btn-container__position">
-                                <a class="btn btn-gray" href="https://github.com/phammon?tab=repositories">github</a>
-                        </div>
-                    </div>
-            </section>
-            <section id="contact" class="section-contact">
-                    <p>if you'd like to chat, shoot me an email!</p>
-                    <p>:)</p>
-                    <a class="btn btn-gray" href="mailto:phammonn%40gmail%2ecom?subject=">Email</a>
-            </section>
-        </main>
-    </body>
+          </div>
+          <div class="col-1-of-3 project-card">
+            <div class="project-card__side project-card__side--front">
+              <div class="project-card__side project-card__side--front project-card__side--front__image">
+                <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/moviedb-app.png'>
+              </div>
+            </div>
+            <div class="project-card__side project-card__side--back">
+              <div class="project-card__side project-card__side--back--text">
+                <div>React</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1-of-3 project-card">
+            <div class="project-card__side project-card__side--front">
+              <div class="project-card__side project-card__side--front project-card__side--front__image">
+                <img class="project-card__side project-card__side--front project-card__side--front--image" src='./img/wikipedia.png'>
+              </div>
+            </div>
+            <div class="project-card__side project-card__side--back">
+              <div class="project-card__side project-card__side--back--text">
+                <div>React</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section-contact">
+      <p>if you'd like to chat, shoot me an email!</p>
+      <p>:)</p>
+      <a class="btn btn-gray" href="mailto:phammonn%40gmail%2ecom?subject=">Email</a>
+    </section>
+  </main>
+</body>
+
 </html>
